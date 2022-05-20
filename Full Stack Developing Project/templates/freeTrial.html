@@ -1,0 +1,70 @@
+{% extends 'base.html' %} {% block content %}
+
+<section class="section-cta">
+  <div class="container">
+    <div class="cta">
+      <div class="cta-text-box">
+        <h2 class="heading-secondary">Get your first month of for free!</h2>
+        <p class="cta-text">
+          You don't have to pay the first month and if we show great results
+          then you can carry on with us but if you don't like our service then
+          you can cancel anytime for a fee of £100,000
+        </p>
+
+        <form class="cta-form" action="#">
+          <div>
+            <label for="full-name">Full Name</label>
+            <input
+              id="full-name"
+              type="text"
+              placeholder="Cristiano Ronaldo"
+              required
+            />
+          </div>
+
+          <div>
+            <label for="email">Email address</label>
+            <input
+              id="email"
+              type="email"
+              placeholder="me@example.com"
+              required
+            />
+          </div>
+
+          <div>
+            <label for="select-where">Where did you hear from us?</label>
+            <select id="select-where" required>
+              <option value="">Please choose one option:</option>
+              <option value="friends">Friends and family</option>
+              <option value="youtube">YouTube video</option>
+              <option value="podcast">Podcast</option>
+              <option value="ad">Facebook ad</option>
+              <option value="others">Others</option>
+            </select>
+          </div>
+
+          <button class="button-sign-up">Sign up now</button>
+
+          <!-- <input type="checkbox" />
+    <input type="number" /> -->
+        </form>
+      </div>
+      <div
+        class="cta-img-box"
+        role="img"
+        aria-label="Woman enjoying food"
+      ></div>
+    </div>
+  </div>
+</section>
+
+<footer class="p-5 bg-#82c91e text-white text-center position-relative">
+  <div class="container">
+    <p class="lead">Copyright &copy; 2022 Vertex Media</p>
+
+    <a href="#" class="position-absolute bottom-0 end-0 p-5"></a>
+    <i class="bi bi-arrow-up-circle h1"></i>
+  </div>
+</footer>
+{% endblock %}

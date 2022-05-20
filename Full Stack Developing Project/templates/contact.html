@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+
+<!--FORMS-->
+{% block content %}
+<section id="contact ">
+  <div class="container-lg bg-primary pt-4 rounded-2 mt-5">
+    <div class="text-center">
+      <h2>Get in Touch</h2>
+      <p class="lead">
+        Questions to ask? Fill out the form to contact me directly...
+      </p>
+    </div>
+
+    <div class="row justify-content-center my-5">
+      <div class="col-lg-6">
+        <form>
+          <!--EMAIL-->
+          <label for="email" class="form-label text-light">Email address</label>
+          <div class="mb-4 input-group border-0">
+            <span class="input-group-text">
+              <ion-icon
+                name="mail-open-outline"
+                class="bi bi-person-fill"
+              ></ion-icon>
+            </span>
+            <input
+              type="email"
+              class="form-control bg-info text-light"
+              id="email"
+              placeholder="e.g.info@outlook.com"
+            />
+          </div>
+          <!--NAME-->
+          <label for="name" class="form-label text-light">Name</label>
+          <div class="input-group mb-4">
+            <span class="input-group-text">
+              <ion-icon
+                name="person-outline"
+                class="bi bi-person-fill"
+              ></ion-icon>
+            </span>
+            <input
+              type="text"
+              class="form-control bg-info text-light"
+              id="name"
+              ,
+              placeholder="e.g.Rob"
+            />
+          </div>
+          <!--QUESTION-->
+          <label for="subject" class="form-label text-light"
+            >What is your question about?</label
+          >
+          <div class="input-group mb-4">
+            <span class="input-group-text">
+              <ion-icon
+                name="help-outline"
+                class="bi bi-person-fill"
+              ></ion-icon>
+            </span>
+            <select class="form-select bg-info" id="subject">
+              <option value="#" selected>...</option>
+              <option value="#" selected>Content query</option>
+              <option value="#" selected>Pricing query</option>
+              <option value="#" selected>Other query</option>
+            </select>
+          </div>
+
+          <div class="form-floating mb-4 mt-5">
+            <textarea
+              name=""
+              id="query"
+              class="form-control text-dark"
+              style="height: 140px"
+            ></textarea>
+            <label for="query" class="form-label text-dark">Your query</label>
+          </div>
+
+          <div class="mb-4 text-center">
+            <button type="submit" class="btn btn-secondary rounded-pill">
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="p-5 bg-#82c91e text-white text-center position-relative">
+  <div class="container">
+    <p class="lead">Copyright &copy; 2022 Vertex Media</p>
+
+    <a href="#" class="position-absolute bottom-0 end-0 p-5"></a>
+    <i class="bi bi-arrow-up-circle h1"></i>
+  </div>
+</footer>
+{% endblock %}

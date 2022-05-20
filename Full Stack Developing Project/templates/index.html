@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='queries.css') }}"
+    />
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='link.css') }}"
+    />
+
+    <script defer src="{{ url_for('static', filename='app.js') }}"></script>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+    ></script>
+    <title>portfolio website</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="heading-title">
+        <a onClick="changeLogoColor('#15aabf')" href="#">VERTEX MEDIA</a>
+      </h1>
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li>
+            <a href="{{ url_for('my_view.home') }}" class="main-nav-link"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="{{ url_for('my_view.contact') }}" class="main-nav-link"
+              >Contact us</a
+            >
+          </li>
+          <li>
+            <a href="{{ url_for('my_view.testimonials')}}" class="main-nav-link"
+              >Testimonials</a
+            >
+          </li>
+          <li>
+            <a href="{{ url_for('my_view.pricing')}}" class="main-nav-link"
+              >Pricing</a
+            >
+          </li>
+          <li>
+            <a
+              href="{{ url_for('my_view.freeTrial')}}"
+              class="main-nav-link nav-cta"
+              >Free Trial</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <button class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
+    </header>
+
+    <main>
+      <section class="section-hero">
+        <div class="hero">
+          <div class="hero-text-box">
+            <h1 class="hero-heading">
+              We help aspiring life coaches scale their online business
+            </h1>
+            <p class="hero-description">
+              If you are just starting out your life coach business and you are
+              unsure how to grow, then leave it all to us. We gurantee
+              outstanding results over a period of 3 months. Take action now,
+              don't leave it too late. There are many people like you who will
+              take action so do'nt get left behind.
+            </p>
+            <a
+              onClick="changeColor('#45260a')"
+              href="#"
+              class="btn-_ btn--full-_ margin-right-sm"
+              >Change Color</a
+            >
+            <a
+              onClick="changeColor('#fdf2e9')"
+              href="#"
+              class="btn-_ btn--outline-_"
+              >Change Color &darr;</a
+            >
+            <p class="delivered-texts">
+              <span>50,000+</span> accounts increased their following from 1k to
+              15 within 3 months last year!
+            </p>
+          </div>
+          <div class="hero-img-box">
+            <img
+              src="{{url_for('static', filename='Images/first-div.jpg') }}"
+              class="hero-img"
+            />
+          </div>
+        </div>
+        <hr />
+
+        <div class="grid-4">
+          <div class="feature">
+            <ion-icon class="feature-icon" name="analytics-outline"></ion-icon>
+            <p class="feature-title">High quality content</p>
+            <p class="feature-text">
+              We gurantee creating high quality content for our customers which
+              we promise will grow you social media brands
+            </p>
+          </div>
+          <div class="feature">
+            <ion-icon class="feature-icon" name="bar-chart-outline"></ion-icon>
+            <p class="feature-title">Use polls to collect info</p>
+            <p class="feature-text">
+              We have multiple softwares that could help us collect what your
+              followers like, which we can then create exciting content.
+            </p>
+          </div>
+          <div class="feature">
+            <ion-icon class="feature-icon" name="body-outline"></ion-icon>
+            <p class="feature-title">Build a community of fans</p>
+            <p class="feature-text">
+              Our aim is to build you a loyal fanbase who constantly interact
+              with your work
+            </p>
+          </div>
+          <div class="feature">
+            <img
+              src="{{ url_for('static', filename='Images/nft.png') }}"
+              class="feature-icon nft-icon"
+            />
+
+            <p class="feature-title">Change Color</p>
+            <p class="feature-text">
+              We gurantee creating high quality content for our customers which
+              we promise will grow you social media brands
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="box-a box grid-col-2">
+        <img src="{{ url_for('static', filename='Images/copywriting.jpg')}}" />
+        <div class="text-box">
+          <h2 class="text-large">Change Color</h2>
+          <p class="text-medium">
+            We provide a copywriting service that can help sell your product. We
+            have some of most experianced copywriters who achieve excellent
+            results.
+          </p>
+          <a onClick="changeBackground('green')" href="#" class="btn" id="btn"
+            >Generate Color</a
+          >
+        </div>
+      </section>
+
+      <section class="box-b box grid-col-2 grid-reverse">
+        <img src="{{ url_for('static', filename='Images/linkedin.jpg') }}" />
+        <div class="text-box">
+          <p class="text-medium">
+            Linkedin is a popular platform and perfect to reach out to a wider
+            audieance. It is super easy to get started
+          </p>
+          <h2 class="text-large">Change Color</h2>
+          <a onClick="changeBackground('green')" href="#" class="btn"
+            >Generate Color</a
+          >
+        </div>
+      </section>
+
+      <section class="box-c box grid-col-2">
+        <img src="{{ url_for('static', filename='Images/instagram.jpg') }}" />
+        <div class="text-box">
+          <h2 class="text-large">Change Color</h2>
+          <p class="text-medium">
+            Instagram is a popular platform and perfect to reach out to a wider
+            audieance. It is super easy to get started
+          </p>
+          <a
+            onClick="changeBackground('green')"
+            href="#"
+            class="btn"
+            id="button"
+            >Generate Color</a
+          >
+        </div>
+      </section>
+
+      <section class="box-d box grid-col-2 grid-reverse">
+        <img src="{{ url_for('static', filename='Images/twitter.jpg') }}" />
+        <div class="text-box">
+          <p class="text-medium">
+            Twitter is a popular platform and perfect to reach out to a wider
+            audieance. It is super easy to get started
+          </p>
+          <h2 class="text-large">Generate Color</h2>
+          <a
+            onClick="changeBackground('green')"
+            href="#"
+            class="btn"
+            id="button"
+            >Generate Color</a
+          >
+        </div>
+      </section>
+
+      <hr />
+
+      <section class="section-featured">
+        <div class="container">
+          <h2 class="heading-featured">As featured</h2>
+          <div class="logos">
+            <img
+              src="{{ url_for('static', filename='Images/techcrunch 11.23.01.png') }}"
+              alt="Techcrunch logo"
+            />
+            <img
+              src="{{ url_for('static', filename='Images/business.png') }}"
+              alt="Business Insider logo"
+            />
+            <img
+              src="{{ url_for('static', filename='Images/the-new-york-times 11.23.01.png') }}"
+              alt="The New York Times logo"
+            />
+            <img
+              src="{{ url_for('static', filename='Images/forbes 11.23.01.png') }}"
+              alt="Forbes logo"
+            />
+            <img
+              src="{{ url_for('static', filename='Images/usa-today 11.23.01.png') }}"
+              alt="USA Today logo"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+    <hr />
+
+    <footer class="p-5 bg-#82c91e text-white text-center position-relative">
+      <div class="container">
+        <p class="lead">Copyright &copy; 2022 Vertex Media</p>
+
+        <a href="#" class="position-absolute bottom-0 end-0 p-5"></a>
+        <i class="bi bi-arrow-up-circle h1"></i>
+      </div>
+    </footer>
+  </body>
+</html>
